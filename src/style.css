@@ -6130,4 +6130,809 @@ button, input, select, textarea {
   background: var(--accent-primary-hover);
 }
 
+/* ==========================================================================
+   COMPREHENSIVE ALL-DEVICE MOBILE RESPONSIVE ENGINE
+   Mobile First, Touch Optimized, Zero Horizontal Overflow (< 768px & < 480px)
+   ========================================================================== */
+
+/* Viewport Global Protection */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  /* --- Announcement Bar --- */
+  .announcement-bar {
+    padding: 0.45rem 0.85rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.35rem;
+  }
+
+  .announcement-content {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .announcement-text {
+    font-size: 0.75rem;
+    line-height: 1.35;
+  }
+
+  .announcement-right {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .announcement-right .announcement-link {
+    display: none;
+  }
+
+  /* --- Navigation Header --- */
+  .header-container {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .brand-logo {
+    gap: 0.5rem;
+  }
+
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-name {
+    font-size: 1.12rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .header-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-auth-pill {
+    padding: 0.25rem 0.55rem 0.25rem 0.35rem;
+    gap: 0.35rem;
+  }
+
+  .auth-greeting {
+    display: none;
+  }
+
+  .user-avatar-dot {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .auth-name {
+    font-size: 0.72rem;
+  }
+
+  .cart-trigger-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  /* --- Mobile Navigation Drawer --- */
+  .main-nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 20, 23, 0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: none;
+    padding: 1.5rem 1.25rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+    overflow-y: auto;
+    z-index: 99;
+  }
+
+  .main-nav .nav-link {
+    font-size: 1.05rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-surface-raised);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+  }
+
+  /* --- JAWS SONIC Running Marquee --- */
+  .sonic-marquee-content {
+    gap: 1.5rem;
+    font-size: 0.74rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* --- Marathon Live Countdown Banner --- */
+  .marathon-countdown-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.65rem;
+    width: calc(100% - 1.5rem);
+    margin: 0.5rem auto 1.25rem auto;
+    padding: 0.75rem 1rem;
+  }
+
+  .marathon-badge, .marathon-timer {
+    align-self: center;
+  }
+
+  .marathon-tagline {
+    font-size: 0.8rem;
+  }
+
+  /* --- Hero Showcase Section --- */
+  .hero-section {
+    padding: 2.25rem 1rem 2.5rem;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: 1.95rem;
+    line-height: 1.22;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .hero-cta-group .btn,
+  .hero-cta-group .hero-link-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .trust-stat {
+    padding: 0.65rem;
+  }
+
+  .trust-stat strong {
+    font-size: 1.25rem;
+  }
+
+  .trust-stat span {
+    font-size: 0.72rem;
+  }
+
+  .hero-visual-card {
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  /* Constrain floating chips within mobile card bounds */
+  .hero-float-chip {
+    padding: 0.35rem 0.65rem;
+    max-width: 80%;
+  }
+
+  .hero-float-chip strong {
+    font-size: 0.7rem;
+  }
+
+  .hero-float-chip small {
+    font-size: 0.6rem;
+  }
+
+  .chip-top-left {
+    top: 8px;
+    left: 8px;
+  }
+
+  .chip-bottom-right {
+    bottom: 80px;
+    right: 8px;
+  }
+
+  .chip-bottom-left {
+    bottom: 90px;
+    left: 8px;
+  }
+
+  /* --- Quick Category Discovery Strip --- */
+  .quick-category-strip {
+    padding: 0 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .quick-cat-scroll {
+    gap: 0.45rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .quick-cat-pill {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  /* --- 3D Enclosure Visualizer Section --- */
+  .visualizer-section {
+    padding: 3rem 0.85rem;
+  }
+
+  .visualizer-stage-card {
+    grid-template-columns: 1fr;
+    padding: 0.85rem;
+    gap: 1.25rem;
+  }
+
+  .canvas-container {
+    min-height: 280px;
+    max-height: 320px;
+  }
+
+  #crib3dCanvas {
+    max-height: 320px;
+  }
+
+  .canvas-overlay-specs {
+    top: 0.5rem;
+    left: 0.5rem;
+    gap: 0.3rem;
+  }
+
+  .canvas-overlay-specs .spec-pill {
+    padding: 0.25rem 0.55rem;
+    font-size: 0.68rem;
+  }
+
+  .canvas-hint {
+    bottom: 0.5rem;
+    font-size: 0.72rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .model-buttons {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .layer-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .layer-pill {
+    flex: 1 1 45%;
+    text-align: center;
+    font-size: 0.74rem;
+    padding: 0.45rem 0.5rem;
+  }
+
+  /* --- "Find Your Crib" Quiz Section --- */
+  .quiz-section {
+    padding: 3rem 0.85rem;
+  }
+
+  .quiz-card {
+    padding: 1.25rem 0.85rem;
+  }
+
+  .quiz-options-grid {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .quiz-option-btn {
+    padding: 0.85rem;
+  }
+
+  .result-body-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* --- Product Catalog & Filters --- */
+  .catalog-section {
+    padding: 3rem 0.85rem;
+  }
+
+  .catalog-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .catalog-view-tools {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .sort-selector-wrap {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  .custom-select {
+    width: auto;
+    max-width: 180px;
+    padding: 0.45rem 0.65rem;
+    font-size: 0.8rem;
+  }
+
+  .filters-sub-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-controls-inline {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .filter-chip {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .chip-select {
+    flex-grow: 1;
+    max-width: 65%;
+  }
+
+  .price-slider-chip {
+    min-width: unset;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+  }
+
+  .chip-range {
+    width: 100%;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .product-list-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .list-specs-strip {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .list-actions-col {
+    align-items: center;
+    width: 100%;
+  }
+
+  .list-btn-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .list-btn-group .btn {
+    flex-grow: 1;
+  }
+
+  /* --- Reviews & Community Showcase --- */
+  .reviews-section, .community-section, .guides-section {
+    padding: 3rem 0.85rem;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .community-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .guides-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* --- Newsletter Banner --- */
+  .newsletter-section {
+    padding: 2.5rem 0.85rem;
+  }
+
+  .newsletter-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .newsletter-input, .newsletter-btn {
+    width: 100%;
+  }
+
+  /* --- Site Footer --- */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 1rem 2rem;
+  }
+
+  .footer-bottom-bar .bottom-container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .payment-badges-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* ========================================================================
+     MODALS & DRAWERS MOBILE RESPONSIVENESS
+     ======================================================================== */
+  .modal-dialog {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    max-height: 94vh !important;
+    padding: 1.25rem 0.85rem !important;
+    margin: auto !important;
+    border-radius: 16px !important;
+  }
+
+  .modal-close-btn {
+    top: 0.65rem;
+    right: 0.65rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1.15rem;
+  }
+
+  /* Product Modal */
+  .product-modal-dialog {
+    padding: 1.25rem 0.85rem !important;
+  }
+
+  .product-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .specs-list {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-action-btns-row {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .modal-action-btns-row .btn {
+    width: 100%;
+  }
+
+  /* Checkout Modal */
+  .checkout-modal-dialog {
+    padding: 1.25rem 0.85rem !important;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .checkout-brand-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .payment-tabs-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+
+  .interactive-card-preview {
+    padding: 1rem 0.85rem;
+  }
+
+  .card-preview-number {
+    font-size: 1.05rem;
+    letter-spacing: 0.1em;
+  }
+
+  .card-holder-col strong, .card-expiry-col strong {
+    font-size: 0.82rem;
+  }
+
+  .upi-qr-display-row {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 0.85rem;
+  }
+
+  .upi-apps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+
+  .netbanking-bank-pills {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+
+  .form-row.two-col,
+  .form-row.three-col {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .invoice-sheet-container {
+    padding: 1rem 0.65rem;
+  }
+
+  .invoice-header-row {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .invoice-table-wrap {
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .invoice-summary-block {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  /* Cart Drawer */
+  .cart-drawer-panel {
+    max-width: 100vw;
+    width: 100%;
+  }
+
+  .cart-drawer-header {
+    padding: 1rem 0.85rem;
+  }
+
+  .cart-drawer-footer {
+    padding: 1rem 0.85rem;
+  }
+
+  .cart-item {
+    gap: 0.75rem;
+    padding: 0.85rem 0;
+  }
+
+  /* Auth Modal */
+  .auth-modal-dialog {
+    padding: 1.25rem 0.85rem !important;
+  }
+
+  .profile-header-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .profile-avatar-circle {
+    margin: 0 auto;
+  }
+
+  .profile-actions-grid {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .demo-btn-group {
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .customer-order-card {
+    padding: 0.85rem;
+  }
+
+  .order-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .order-tracker-steps {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .step-line {
+    display: none;
+  }
+
+  /* Admin Dashboard */
+  .admin-modal-dialog {
+    width: 98vw !important;
+    max-width: 98vw !important;
+    padding: 1rem 0.65rem !important;
+  }
+
+  .admin-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .admin-nav-tabs {
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.35rem;
+  }
+
+  .admin-stats-ribbon {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .admin-section-header-split {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .admin-search-input {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .admin-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .admin-table-container {
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .admin-table {
+    min-width: 600px;
+  }
+
+  /* Floating Keeper Support Desk */
+  .floating-support-wrap {
+    bottom: 14px;
+    right: 14px;
+    z-index: 1000;
+  }
+
+  .floating-support-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .support-chat-drawer {
+    width: min(350px, calc(100vw - 28px));
+    max-width: calc(100vw - 28px);
+    height: min(460px, 76vh);
+    right: 0;
+    bottom: calc(100% + 10px);
+  }
+}
+
+/* --- Ultra-Compact Mobile Phones (< 480px) --- */
+@media (max-width: 480px) {
+  .brand-tagline {
+    display: none;
+  }
+
+  .header-actions .compare-header-btn {
+    display: none;
+  }
+
+  .cart-trigger-btn span:first-of-type {
+    display: none;
+  }
+
+  .cart-trigger-btn {
+    padding: 0.45rem 0.65rem;
+  }
+
+  .hero-title {
+    font-size: 1.65rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .quick-cat-pill {
+    padding: 0.3rem 0.65rem;
+    font-size: 0.72rem;
+  }
+
+  .cat-pill-icon {
+    font-size: 0.82rem;
+  }
+
+  .timer-unit strong {
+    font-size: 0.95rem;
+  }
+
+  .timer-unit span {
+    font-size: 0.5rem;
+  }
+
+  .bioactive-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .bioactive-btns .btn {
+    width: 100%;
+  }
+
+  .payment-tabs-row {
+    grid-template-columns: 1fr;
+  }
+
+  .upi-apps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .netbanking-bank-pills {
+    grid-template-columns: 1fr;
+  }
+}
+
 

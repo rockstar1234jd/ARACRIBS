@@ -48,6 +48,10 @@ A high-performance, full-featured modern E-commerce web application tailored exc
    - Interactive acrylic enclosure visualizer with real-time lid switching (slider vs canopy), 360-degree rotation, and bioactive substrate layering.
    - 3-step habitat recommendation quiz tailored for beginner, intermediate, and advanced arachnid keepers.
 
+9. **100% Mobile Responsive Across All Devices**:
+   - Touch-optimized across all viewport widths (320px compact phones, iPhone SE, standard 390-430px Android/iOS devices, foldables, and tablets).
+   - Zero horizontal overflow protection, full-width touch drawers, responsive 3D card checkout, UPI QR scaling, and automatic mobile navigation drawer dismissal on click.
+
 ---
 
 ## 🚀 Quick Start Guide (Kaise Run Kare)

@@ -819,6 +819,14 @@ class AracribsApp {
         mainNav.classList.toggle('mobile-open');
         mobBtn.classList.toggle('open');
       });
+
+      // Automatically close mobile menu when clicking any navigation link
+      mainNav.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mainNav.classList.remove('mobile-open');
+          mobBtn.classList.remove('open');
+        });
+      });
     }
 
     // Reactive counter updates

@@ -414,9 +414,10 @@ export class ProductCatalog {
       });
     });
 
-    // Interactive 3D tilt effect on mouse movement for grid cards
+    // Interactive 3D tilt effect on mouse movement for grid cards (desktop fine pointer only)
     pCont.querySelectorAll('.product-card').forEach(card => {
       card.addEventListener('mousemove', (e) => {
+        if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
